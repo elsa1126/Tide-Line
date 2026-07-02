@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
@@ -198,93 +198,155 @@
             </div>
         </section>
 
-        <!-- 行程 Day 1 & Day 2 -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- 行程 Day 1 & Day 2 (滿版設計) -->
+        <section class="space-y-12">
             <!-- Day 1 -->
-            <div class="bg-card-bg rounded-2xl shadow-sm p-8 space-y-6">
-                <span class="inline-block border border-brand-blue text-brand-blue px-3 py-1 text-sm font-bold rounded">Day 1</span>
-                <h2 class="font-serif-title text-2xl font-bold text-brand-blue">交流晚會——對話實驗場</h2>
-                <p class="text-sm text-brand-gray leading-relaxed">
-                    第一天下午，60 位來自不同背景的年輕人將在諸羅設計塾相遇。這不是一場傳統的講座或研討會，而是一個充滿實驗精神的「對話實驗場」。我們將整個場域劃分為多個小空間，每個空間都有獨特的主題與活動形式。
-                </p>
+            <div class="bg-card-bg rounded-2xl shadow-sm p-8 sm:p-12 space-y-8">
+                <div>
+                    <span class="inline-block border border-brand-blue text-brand-blue px-3 py-1 text-sm font-bold rounded mb-4">Day 1</span>
+                    <h2 class="font-serif-title text-3xl font-bold text-brand-blue">交流晚會——對話實驗場</h2>
+                </div>
                 
-                <!-- 垂直時間軸 -->
-                <div class="relative pl-6 border-l-2 border-brand-blue space-y-6 my-6">
+                <p class="text-brand-text leading-relaxed max-w-4xl">
+                    第一天下午，60 位來自不同背景的年輕人將在諸羅設計塾相遇。這不是一場傳統的講座或研討會，而是一個充滿實驗精神的「對話實驗場」。我們將整個場域劃分為多個小空間，每個空間都有獨特的主題與活動形式，讓參與者能夠根據自己的興趣與狀態，自由選擇想要參與的互動。
+                </p>
+
+                <details class="group">
+                    <summary class="cursor-pointer font-medium flex items-center gap-2 text-brand-text hover:text-brand-blue transition-colors">
+                        <svg class="w-4 h-4 transform transition-transform group-open:rotate-90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                        查看更多
+                    </summary>
+                    <div class="pt-4 pl-6 border-l-2 border-gray-200 space-y-4 text-brand-gray text-sm leading-relaxed mt-2">
+                        <p>晚會的核心精神是「打破框架、真實相遇」。我們刻意避免單向的知識傳遞，而是設計各種能夠促進真實對話的環節——從輕鬆的娛樂破冰，到深度的議題沙龍，再到需要協作完成的展覽共創。每個環節都經過精心設計，讓參與者在「玩」的過程中，自然地卸下防備，展現最真實的自己。</p>
+                        <p>「娛樂破冰」環節包含開場破冰遊戲、講幹話大賽與八卦算命攤，讓大家在笑聲中建立初步的連結；「主題交流」則包含停浪線電競賽、議題沙龍與學生舞台，讓有興趣深入交流的參與者能在特定主題下進行更深入的對話；「展覽共創」則是所有人共同完成的集體創作，包括車票地圖、主視覺共創與「什麼是停浪線」的集體書寫，讓每個人的足跡都成為這場活動的一部分。</p>
+                    </div>
+                </details>
+                
+                <!-- 水平時間軸 (已修復重疊問題) -->
+                <div class="py-20 relative hidden md:block">
+                    <!-- 中間的灰線 -->
+                    <div class="absolute top-1/2 left-0 w-full h-[2px] bg-gray-300 -translate-y-1/2 z-0"></div>
+                    
+                    <!-- 使用 grid 均分三等份，限制文字溢出範圍 -->
+                    <div class="relative z-10 grid grid-cols-3 gap-2 max-w-4xl mx-auto">
+                        <!-- 節點 1 -->
+                        <div class="flex flex-col items-center relative group">
+                            <!-- w-full 確保文字最多只佔滿這 1/3 的寬度，自動換行不重疊 -->
+                            <div class="absolute bottom-full mb-4 text-center w-full px-2">
+                                <h4 class="font-bold text-brand-text whitespace-nowrap">15:30–16:00</h4>
+                                <p class="text-sm text-brand-gray mt-1">報到</p>
+                            </div>
+                            <div class="w-10 h-10 bg-page-bg border-2 border-gray-300 text-brand-text font-bold rounded-sm flex items-center justify-center">1</div>
+                            <div class="w-[2px] h-6 bg-gray-300 absolute bottom-full mb-1"></div>
+                        </div>
+
+                        <!-- 節點 2 -->
+                        <div class="flex flex-col items-center relative group">
+                            <div class="w-10 h-10 bg-page-bg border-2 border-gray-300 text-brand-text font-bold rounded-sm flex items-center justify-center">2</div>
+                            <div class="absolute top-full mt-4 text-center w-full px-2">
+                                <h4 class="font-bold text-brand-text whitespace-nowrap">16:00–20:00</h4>
+                                <p class="text-sm text-brand-gray mt-1">晚會正式進行<br class="hidden lg:block">（娛樂破冰・主題交流・展覽共創）</p>
+                            </div>
+                            <div class="w-[2px] h-6 bg-gray-300 absolute top-full mt-1"></div>
+                        </div>
+
+                        <!-- 節點 3 -->
+                        <div class="flex flex-col items-center relative group">
+                            <div class="absolute bottom-full mb-4 text-center w-full px-2">
+                                <h4 class="font-bold text-brand-text whitespace-nowrap">20:00–21:00</h4>
+                                <p class="text-sm text-brand-gray mt-1">結束、解散</p>
+                            </div>
+                            <div class="w-10 h-10 bg-page-bg border-2 border-gray-300 text-brand-text font-bold rounded-sm flex items-center justify-center">3</div>
+                            <div class="w-[2px] h-6 bg-gray-300 absolute bottom-full mb-1"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 手機版垂直時間軸 (保留以供小螢幕觀看) -->
+                <div class="relative pl-6 border-l-2 border-gray-300 space-y-8 py-6 md:hidden">
                     <div class="relative">
-                        <div class="absolute -left-[33px] bg-brand-blue text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">1</div>
+                        <div class="absolute -left-[33px] bg-page-bg border-2 border-gray-300 text-brand-text w-8 h-8 rounded-sm flex items-center justify-center text-sm font-bold">1</div>
                         <h4 class="font-bold text-brand-text">15:30–16:00</h4>
                         <p class="text-sm text-brand-gray">報到</p>
                     </div>
                     <div class="relative">
-                        <div class="absolute -left-[33px] bg-brand-blue text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">2</div>
+                        <div class="absolute -left-[33px] bg-page-bg border-2 border-gray-300 text-brand-text w-8 h-8 rounded-sm flex items-center justify-center text-sm font-bold">2</div>
                         <h4 class="font-bold text-brand-text">16:00–20:00</h4>
                         <p class="text-sm text-brand-gray">晚會正式進行（娛樂破冰・主題交流・展覽共創）</p>
                     </div>
                     <div class="relative">
-                        <div class="absolute -left-[33px] bg-brand-blue text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">3</div>
+                        <div class="absolute -left-[33px] bg-page-bg border-2 border-gray-300 text-brand-text w-8 h-8 rounded-sm flex items-center justify-center text-sm font-bold">3</div>
                         <h4 class="font-bold text-brand-text">20:00–21:00</h4>
                         <p class="text-sm text-brand-gray">結束、解散</p>
                     </div>
                 </div>
 
-                <div class="space-y-3">
-                    <div class="border border-blue-200 rounded-lg p-4 border-l-4 border-l-brand-blue">
-                        <h4 class="font-bold text-brand-blue text-sm mb-1">娛樂破冰</h4>
-                        <p class="text-xs text-brand-gray">開場破冰、講幹話大賽、八卦算命攤——讓笑聲成為最自然的破冰劑。</p>
+                <!-- 底部三欄卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+                    <div class="border-2 border-brand-blue border-l-8 rounded bg-white p-6">
+                        <h4 class="font-bold text-lg text-brand-text mb-3">娛樂破冰</h4>
+                        <p class="text-sm text-brand-gray leading-relaxed">開場破冰、講幹話大賽、八卦算命攤——讓笑聲成為最自然的破冰劑。</p>
                     </div>
-                    <div class="border border-blue-200 rounded-lg p-4 border-l-4 border-l-brand-blue">
-                        <h4 class="font-bold text-brand-blue text-sm mb-1">主題交流</h4>
-                        <p class="text-xs text-brand-gray">停浪線電競賽、議題沙龍、學生舞台——在共同興趣中找到深度對話的入口。</p>
+                    <div class="border-2 border-brand-blue border-l-8 rounded bg-white p-6">
+                        <h4 class="font-bold text-lg text-brand-text mb-3">主題交流</h4>
+                        <p class="text-sm text-brand-gray leading-relaxed">停浪線電競賽、議題沙龍、學生舞台——在共同興趣中找到深度對話的入口。</p>
                     </div>
-                    <div class="border border-blue-200 rounded-lg p-4 border-l-4 border-l-brand-blue">
-                        <h4 class="font-bold text-brand-blue text-sm mb-1">展覽共創</h4>
-                        <p class="text-xs text-brand-gray">車票地圖、主視覺共創、什麼是停浪線——每個人都可以是展覽的共同作者。</p>
+                    <div class="border-2 border-brand-blue border-l-8 rounded bg-white p-6">
+                        <h4 class="font-bold text-lg text-brand-text mb-3">展覽共創</h4>
+                        <p class="text-sm text-brand-gray leading-relaxed">車票地圖、主視覺共創、什麼是停浪線——每個人都可以是展覽的共同作者。</p>
                     </div>
                 </div>
             </div>
 
             <!-- Day 2 -->
-            <div class="bg-card-bg rounded-2xl shadow-sm p-8 space-y-6">
-                <span class="inline-block border border-brand-blue text-brand-blue px-3 py-1 text-sm font-bold rounded">Day 2</span>
-                <h2 class="font-serif-title text-2xl font-bold text-brand-blue">城市探索——生活觀察站</h2>
-                <p class="text-sm text-brand-gray leading-relaxed">
+            <div class="bg-card-bg rounded-2xl shadow-sm p-8 sm:p-12 space-y-8">
+                <div>
+                    <span class="inline-block border border-brand-blue text-brand-blue px-3 py-1 text-sm font-bold rounded mb-4">DAY 2</span>
+                    <h2 class="font-serif-title text-3xl font-bold text-brand-blue">城市探索——生活觀察站</h2>
+                </div>
+                
+                <p class="text-brand-text leading-relaxed max-w-4xl">
                     第二天，我們將整個嘉義市變成一個巨大的遊戲場。60 位參與者將分為 6 個小組，每組配有隊輔，穿梭在嘉義城市的各種空間中。這不是普通的觀光旅遊，而是一場需要感知、思考與合作才能完成的「城市探索任務」。
                 </p>
 
-                <div class="space-y-4 mt-6">
-                    <div class="bg-[#e9eff7] p-5 rounded-xl flex items-start gap-4">
-                        <div class="w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center flex-shrink-0">📍</div>
-                        <div>
-                            <h4 class="font-bold text-brand-blue">城市空間探索</h4>
-                            <p class="text-sm text-brand-gray mt-1">穿梭嘉義市各特色空間，在真實的城市脈絡中完成任務。</p>
-                        </div>
-                    </div>
-                    <div class="bg-[#e9eff7] p-5 rounded-xl flex items-start gap-4">
-                        <div class="w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center flex-shrink-0">🧩</div>
-                        <div>
-                            <h4 class="font-bold text-brand-blue">互動解謎任務</h4>
-                            <p class="text-sm text-brand-gray mt-1">每完成一個任務，解鎖下一關線索，逐步推進探索進程。</p>
-                        </div>
-                    </div>
-                    <div class="bg-[#e9eff7] p-5 rounded-xl flex items-start gap-4">
-                        <div class="w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center flex-shrink-0">👥</div>
-                        <div>
-                            <h4 class="font-bold text-brand-blue">團隊協作共創</h4>
-                            <p class="text-sm text-brand-gray mt-1">6 組隊伍相互競爭又相互學習，在合作中展現多元視角。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <details class="bg-gray-50 rounded-xl group mt-4">
-                    <summary class="cursor-pointer font-medium p-4 flex items-center gap-2 text-brand-blue hover:bg-gray-100 rounded-xl transition-colors">
-                        <svg class="w-5 h-5 transform transition-transform group-open:rotate-90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                        查看探索細節
+                <details class="group">
+                    <summary class="cursor-pointer font-medium flex items-center gap-2 text-brand-text hover:text-brand-blue transition-colors">
+                        <svg class="w-4 h-4 transform transition-transform group-open:rotate-90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                        查看更多
                     </summary>
-                    <div class="p-6 pt-2 space-y-4 text-brand-gray text-sm leading-relaxed">
-                        <p>每支隊伍將透過解鎖互動任務、上傳審核、解謎下一關的方式，逐步推進探索進程。任務的設計融合了對城市空間的觀察、對生活細節的感知，以及團隊協作的能力。</p>
-                        <p>城市探索的最終，所有小組將匯聚完成終極任務，並進行社群共創與交流頒獎。這一天的體驗，將是兩天活動中最具挑戰性、也最能體現「跨體制共創」精神的環節。</p>
+                    <div class="pt-4 pl-6 border-l-2 border-gray-200 space-y-4 text-brand-gray text-sm leading-relaxed mt-2">
+                        <p>每支隊伍將透過解鎖互動任務、上傳審核、解謎下一關的方式，逐步推進探索進程。任務的設計融合了對城市空間的觀察、對生活細節的感知，以及團隊協作的能力。我們希望參與者在這個過程中，不只認識嘉義這座城市，更能在與隊友的互動中，看見自己與他人不同的觀察視角與思考方式。</p>
+                        <p>城市探索的最終，所有小組將匯聚完成終極任務，並進行社群共創與交流頒獎。這一天的體驗，將是兩天活動中最具挑戰性、也最能體現「跨體制共創」精神的環節——因為在真實的城市脈絡中，沒有標準答案，只有不斷探索、相互協作的過程。</p>
+                        <p>從準備階段的集合與物資發放，到跑關階段的解鎖互動任務與上傳審核，再到收尾階段的最終任務解鎖與社群共創，整個城市探索流程設計為一個完整的敘事弧線，讓參與者在每個階段都能感受到 progression 與成就感。</p>
                     </div>
                 </details>
+
+                <!-- 底部三欄圖示卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+                    <div class="bg-[#f0ece5] rounded-lg p-6 space-y-4">
+                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-lg text-brand-text">城市空間探索</h4>
+                        <p class="text-sm text-brand-gray leading-relaxed">穿梭嘉義市各特色空間，在真實的城市脈絡中完成任務。</p>
+                    </div>
+                    
+                    <div class="bg-[#f0ece5] rounded-lg p-6 space-y-4">
+                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-lg text-brand-text">互動解謎任務</h4>
+                        <p class="text-sm text-brand-gray leading-relaxed">每完成一個任務，解鎖下一關線索，逐步推進探索進程。</p>
+                    </div>
+                    
+                    <div class="bg-[#f0ece5] rounded-lg p-6 space-y-4">
+                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-lg text-brand-text">團隊協作共創</h4>
+                        <p class="text-sm text-brand-gray leading-relaxed">6 組隊伍相互競爭又相互學習，在合作中展現多元視角。</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -359,9 +421,78 @@
             </div>
         </section>
 
+        <!-- 核心價值 (新增) -->
+        <section class="bg-card-bg rounded-2xl shadow-sm p-8 sm:p-12 space-y-10">
+            <!-- 標題與引言 -->
+            <div>
+                <span class="inline-block bg-brand-blue text-white px-3 py-1 text-sm font-bold rounded mb-4">核心價值</span>
+                <h2 class="font-serif-title text-3xl font-bold text-brand-text mb-6">三個行動主軸，一個共同信念</h2>
+                <div class="space-y-4 text-brand-text leading-relaxed">
+                    <p>停浪線計畫以「玩」為核心價值，透過三個行動主軸來執行整個計畫。這三個主軸不是各自獨立的活動環節，而是一個相互支撐的整體——從建立連結、深化對話，到共同創造，每一步都環環相扣，引導參與者從陌生到熟悉，從旁觀到共創。</p>
+                    <p>「玩」對我們而言，不只是輕鬆娛樂的代名詞，而是一種態度、一種方法論。當我們以「玩」的姿態面對世界，我們更容易放下防備、展現真實；當我們以「玩」的態度進行對話，我們更願意聆聽不同觀點、接納多元差異。停浪線計畫的三個行動主軸，正是這種「玩的精神」的具體實踐。</p>
+                </div>
+            </div>
+
+            <!-- 三欄主軸圖示與說明 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
+                <!-- 主軸 1 -->
+                <div class="flex flex-col text-center">
+                    <!-- 對話群組 Icon -->
+                    <svg class="w-20 h-20 mx-auto mb-6 text-brand-text stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.84 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                    </svg>
+                    <h3 class="font-bold text-lg text-brand-text mb-4">交流晚會——對話實驗場</h3>
+                    <details class="group text-left">
+                        <summary class="cursor-pointer font-medium flex items-center justify-center gap-2 text-brand-gray hover:text-brand-blue transition-colors mb-4">
+                            查看更多
+                            <svg class="w-4 h-4 transform transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </summary>
+                        <div class="text-brand-gray text-sm leading-relaxed">
+                            <p>透過娛樂破冰、主題交流與展覽共創三大環節，讓 60 位參與者在輕鬆自在的氛圍中建立初步連結。晚會的設計刻意避免單向的知識傳遞，而是創造多個小空間，讓參與者能根據自己的興趣與狀態，自由選擇想要參與的互動，在「玩」的過程中自然地卸下防備。</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 主軸 2 -->
+                <div class="flex flex-col text-center">
+                    <!-- 城市建築 Icon -->
+                    <svg class="w-20 h-20 mx-auto mb-6 text-brand-text stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                    </svg>
+                    <h3 class="font-bold text-lg text-brand-text mb-4">城市探索——生活觀察站</h3>
+                    <details class="group text-left">
+                        <summary class="cursor-pointer font-medium flex items-center justify-center gap-2 text-brand-gray hover:text-brand-blue transition-colors mb-4">
+                            查看更多
+                            <svg class="w-4 h-4 transform transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </summary>
+                        <div class="text-brand-gray text-sm leading-relaxed">
+                            <p>將整個嘉義市變成一個巨大的遊戲場，6 支隊伍透過解鎖互動任務、上傳審核、解謎下一關的方式，逐步推進探索進程。任務設計融合了對城市空間的觀察、對生活細節的感知，以及團隊協作的能力，讓參與者在真實的城市脈絡中，看見自己與他人不同的觀察視角。</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 主軸 3 -->
+                <div class="flex flex-col text-center">
+                    <!-- 燈泡靈感 Icon -->
+                    <svg class="w-20 h-20 mx-auto mb-6 text-brand-text stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.829 1.605-2.011a4.473 4.473 0 0 0 3.14-3.14c.182-.948 1.028-1.605 2.011-1.605H21m-12 0H7.5c-.983 0-1.829.657-2.011 1.605a4.473 4.473 0 0 0-3.14 3.14C2.167 16.171 1.509 17.017.526 17.017V18m2.25-10.5A8.25 8.25 0 0 1 12 3a8.25 8.25 0 0 1 9.225 4.5M12 3v1.5M6.375 5.625 7.425 6.675M17.625 5.625l-1.05 1.05" />
+                    </svg>
+                    <h3 class="font-bold text-lg text-brand-text mb-4">跨體制共創——集體創作</h3>
+                    <details class="group text-left">
+                        <summary class="cursor-pointer font-medium flex items-center justify-center gap-2 text-brand-gray hover:text-brand-blue transition-colors mb-4">
+                            查看更多
+                            <svg class="w-4 h-4 transform transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </summary>
+                        <div class="text-brand-gray text-sm leading-relaxed">
+                            <p>從車票地圖到主視覺共創，從「什麼是停浪線」的集體書寫到社群共創，每個環節都強調「共同創造」的精神。參與者不只是活動的消費者，更是活動的共同作者——每個人的貢獻都將被看見、被記錄，成為這場實驗不可分割的一部分。</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer / CTA -->
         <footer class="text-center pt-8 pb-4">
-            <h2 class="font-serif-title text-2xl font-bold text-brand-blue mb-6">三個行動主軸，一個共同信念</h2>
             <div class="flex justify-center gap-4">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSepuJiZShmdcq8QpGgVnMXtw6csF9n3bxCpwX1_H3Ya-3vdFw/viewform?pli=1" target="_blank" class="px-8 py-3 bg-brand-blue text-white rounded-md font-medium hover:bg-blue-800 transition-colors">
                     立即報名參與
